@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Informe</title>
+</head>
+<body>
+
+</body>
+</html>
+
+{% extends "layout.html" %}
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/menu">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/Crear Informe">Crear Informe <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item disabled">
+        <a class="nav-link disabled" href="#">Tramitar Visto bueno<span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item disabled">
+        <a class="nav-link disabled" href="#">Derivar<span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/logout">Salir <span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="form-group">
+    <form action="/informe" method="get">
+  <label class="col-form-label col-form-label-lg" for="inputLarge">Ingresa URL de Caratula</label>
+  <input class="form-control form-control-lg" type="text" name="URL" placeholder="URL" id="inputLarge">
+  <button type="submit" value="URL" class="btn btn-primary">Ingresar</button>
+        </form>
+</div>
+{% endblock %}

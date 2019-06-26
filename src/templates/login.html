@@ -1,0 +1,21 @@
+
+{% extends "layout.html" %}
+{% block body %}
+    <center>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Logo_Gobierno_de_Chile_2010-2014.svg/1200px-Logo_Gobierno_de_Chile_2010-2014.svg.png" width="150" height="150" id="icon" alt="User Icon" />
+    </div>
+    <form action="/login" method="POST">
+        <input class="form-control mr-sm-2" type="username" name="username" placeholder="usuario">
+        <h1></h1>
+        <input class="form-control mr-sm-2" type="password" name="password" placeholder="contraseña">
+        <h1></h1>
+        <button type="submit" value="Log in" class="btn btn-primary">Entrar</button>
+    </form>
+    </center>
+{% endblock %}
+
+
+
+

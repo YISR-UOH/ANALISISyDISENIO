@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vista</title>
+</head>
+
+{% extends "layout.html" %}
+{% block body %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="/menu">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/Crear Informe">Crear Informe <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item disabled">
+        <a class="nav-link disabled" href="">Tramitar Visto bueno <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item disabled">
+        <a class="nav-link disabled" href="">Derivar<span class="sr-only">(current)</span></a>
+      </li>
+         <li class="nav-item active">
+        <a class="nav-link" href="/descargar">Descargar <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="/logout">Salir <span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+    <body>
+    <h1>INFORME DE EXPOSICIÓN</h1>
+    <br/>
+		<table border="1">
+		<tr>
+			<th>Region</th>
+			<th>Año</th>
+            <th>N°Fiscalizacion</th>
+		</tr>
+		<tr>
+			<td>{{ info.lblRegion[0]+info.lblIct[0]}}</td>
+            <td>{{ info.lblAgno[0]}}</td>
+            <td>{{ info.lblFisc[0]}}</td>
+		</tr>
+		</table>
+    <br/>
+    <h1>Antecedentes de la empresa y de la fiscalización.</h1>
+    <br/>
+    	<table border="1">
+
+		<tr>
+			<td>Nombre / Razón Social</td>
+			<td>{{ datos.lblRazonSocial[0]}}</td>
+		</tr>
+            <tr>
+			<td>RUT</td>
+			<td>{{ datos.lblRutEmp[0]}}</td>
+		</tr>
+            <tr>
+			<td>Representante Legal</td>
+			<td>{{ datos.lblNombreRL[0]}}</td>
+		</tr>
+            <tr>
+			<td>Rut Rep.Legal</td>
+			<td>{{ datos.lblRutRL[0]}}</td>
+		</tr>
+            <tr>
+			<td>Domicilio Casa Matriz</td>
+			<td>{{ datos.lblDomL[0]}}</td>
+		</tr>
+            <tr>
+			<td>Org. Adm. Ley 16.744</td>
+			<td>{{ datos.lblOrgAdm16744[0]}}</td>
+		</tr>
+            <tr>
+			<td>Total Trabajadores Empresa</td>
+			<td>{{ trabajadores.lblTotal[0]}}</td>
+		</tr>
+            <tr>
+			<td>Fecha Visita</td>
+			<td></td>
+		</tr>
+            <tr>
+			<td>Hora Inicio</td>
+			<td></td>
+		</tr>
+            <tr>
+			<td>Fecha de origen</td>
+			<td>{{ datos.lblFechaOrigen[0]}}</td>
+		</tr>
+		</table>
+    <br/>
+
+    <h1>1.	Síntesis del procedimiento y de los medios de investigación utilizados para la constatación de los hechos:</h1>
+	</body>
+     <br/>
+    	<table border="1">
+
+		<tr>
+			<td>Inicio de fiscalización</td>
+			<td>Con fecha __-__-____, se realiza visita a la dirección indicada en denuncia, específicamente en, ubicado en {{datos.lblDomL[0]}} </td>
+		</tr>
+        <tr>
+			<td>Inicio de fiscalización</td>
+			<td></td>
+		</tr>
+        <tr>
+<td>Materias Fiscalizadas</td>
+<td></td>
+</tr>
+<tr>
+<td>Preparación de la visita</td>
+<td></td>
+</tr>
+<tr>
+<td>Procedimientos utilizados</td>
+<td></td>
+</tr>
+<tr>
+<td>Periodo revisado</td>
+<td></td>
+</tr>
+<tr>
+<td>Documentación revisada</td>
+<td></td>
+</tr>
+<tr>
+<td>Situaciones planteadas por trabajador</td>
+<td></td>
+</tr>
+<tr>
+<td>Principio de bilateralidad</td>
+<td></td>
+</tr>
+<tr>
+<td>Formularios utilizados</td>
+<td></td>
+</tr>
+<tr>
+<td>Visita efectuada en mejor día y hora solicitado por denunciante</td>
+<td></td>
+</tr>
+<tr>
+<td>Otro antecedente</td>
+<td></td>
+</tr>
+		</table>
+    <br/>
+{% endblock %}
+</html>
